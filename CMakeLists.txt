@@ -179,7 +179,7 @@ elseif(APPLE)
         MACOSX_BUNDLE ON
         MACOSX_BUNDLE_INFO_PLIST ${CMAKE_SOURCE_DIR}/dist/macos/Info.plist.in
     )
-    set(CMAKE_OSX_DEPLOYMENT_TARGET "10.9" CACHE STRING "Minimum macOS deployment version")
+    set(CMAKE_OSX_DEPLOYMENT_TARGET "10.9" CACHE STRING "Minimum macOS version" FORCE)
     deploy(all $<TARGET_FILE_DIR:apk-editor-studio>)
     deploy(macos/app $<TARGET_FILE_DIR:apk-editor-studio>/../..)
     add_custom_command(
